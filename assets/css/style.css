@@ -1,0 +1,792 @@
+@font-face {
+    font-family: Monsterrat;
+    src: url('../font/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url('../font/Oswald/Oswald-VariableFont_wght.ttf');
+}
+
+body {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    font-family: 'Monsterrat';
+    background-color: white;
+    letter-spacing: 1px;
+}
+
+.content h3 {
+    font-family: 'Oswald';
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #2F4858;
+}
+
+.content h2 {
+    font-family: 'Oswald';
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 15px 60px;
+    background: #FFA800;
+    border: none;
+    border-radius: 100px 100px 100px 100px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #2F4858;
+}
+
+.hidden {
+    display: none;
+}
+
+.header {
+    position: absolute;
+    height: auto;
+    height: 128px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    font-family: 'Monsterrat';
+    font-size: 18px;
+    display: flex;
+    justify-content: space-around;
+    background-image: url(../img/Union.svg);
+    background-size: cover;
+    background-position: center bottom;
+    z-index: 1;
+}
+
+.menubtn {
+    display: none;
+}
+
+.navbar-brand {
+    height: 70%;
+}
+
+.navbar-brand img {
+    max-width:100%;
+    max-height:100%;
+    object-fit: contain;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 0.5;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #060606;
+    padding: 2px;
+}
+
+.nav-link:hover {
+    font-weight: 600;
+    border-bottom: 3px solid #FFA800;
+}
+
+.navbar-lang {
+    display: flex;
+    height: inherit;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.navbar-lang li {
+    display: inline-block;
+    position: relative;
+}
+
+.navbar-lang li:hover ul {
+    display: block;
+}
+
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+}
+
+.lang-dropdown li {
+    padding: 0 0 10px 0;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+.section-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.section-video img {
+    max-width: 100%;
+}
+
+.playbtn {
+    position: absolute;
+    cursor: pointer;
+}
+
+.section-summary {
+    display: flex;
+    align-items: center;
+    height: 432px;
+    text-align: center;
+    padding: 0 16px;
+    line-height: 22px;
+}
+
+.section-summary p {
+    max-width: 654px;
+}
+
+.section-gallery {
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-image: url(../img/gallery_ripper_top.svg), url(../img/gallery_ripper_bot.svg);
+    background-position: center top, center bottom;
+    background-repeat: no-repeat, no-repeat;
+    padding: 15px 0;
+}
+
+.gallery {
+    display: grid;
+    width: auto;
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-flow: column dense;
+}
+
+.gallery .image {
+    z-index: -1;
+}
+
+.item-a {
+    grid-row: 1/3;
+}
+
+.item-b {
+    grid-row: 1/3;
+}
+
+.item-e {
+    grid-row: 1/3;
+}
+
+.gallery img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.section-btns {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 110px 0px;
+}
+
+.section-btns .container {
+    padding: 40px 0;
+}
+
+.section-btns h3 {
+    margin-bottom: 60px;
+}
+
+.section-sponsors {
+    position: relative;
+    bottom: -100px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-image: url(../img/Subtract.svg);
+    background-size: cover;
+    background-position: center top;
+    padding: 100px 0 150px 0;
+}
+
+.section-sponsors ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.section-contact {
+    max-width: 613px;
+    padding: 0px 20px;
+}
+
+.section-contact h2 {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.form {
+    width: 100%;
+}
+
+.form input[type=text], input[type=number], textarea {
+    float: left;
+    box-sizing: border-box;
+    padding: 12px;
+    margin: 15px 0;
+    font-size: 18px;
+    font-family: 'Monsterrat';
+    background-color: rgba(196, 196, 196 , 0.4);
+    border: none;
+    border-radius: 6px;
+}
+
+::placeholder {
+    color: rgba(47, 72, 88, 1);
+
+}
+
+.checkbox-container {
+    box-sizing: border-box;
+    line-height: 17px;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: rgba(196, 196, 196 , 0.4);
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.form textarea {
+    height: 232px;
+}
+
+.form .col-half {
+    width: 49%;
+}
+
+.form #email {
+    float: right;
+}
+
+.form .col-full {
+    width: 100%;
+}
+
+.form p {
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.form label {
+    float: left;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.form .btn {
+    display: block;
+    font-size: 24px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    background-image: url(../img/Rectangle\ 48.svg);
+    background-size: cover;
+    background-position: center top;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    z-index: 1;
+}
+
+.futbar {
+    display: flex;
+    min-height: 264px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+    font-size: 18px;
+    line-height: 30px;
+    padding-top: 10px;
+}
+
+.futbar-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.futbar-links .nav-link {
+    color: white;
+    font-size: 18px;
+}
+
+.futbar-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.futbar-icons {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.futbar-icons img {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.extra {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.extra a {
+    text-decoration: none;
+    color: white;
+}
+
+.extra p {
+    margin-bottom: 8px;
+}
+
+.futbar h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.futbar-contact a {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    display: none;
+}
+
+.futbar-brand h3 {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.scroll-container {
+    display: block;
+    height: auto;
+    width: auto;
+}
+
+#scrollbtn {
+    display: none;
+    position: sticky;
+    bottom: 5%;
+    margin-left: 80%;
+    z-index: 2;
+    border: none;
+    outline: none;
+    background-color: rgba(47, 72, 88, 1);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+  
+  #scrollbtn:hover {
+    background-color: #555;
+  }
+
+
+@media screen and (max-width: 1300px) {
+    .content h3 {
+        font-size: 18px;
+    }
+
+    .header {
+        flex-wrap: wrap;
+        height: 100px;
+        justify-content: space-between;
+        font-size: 24px;
+    }
+
+    .menubtn {
+        display: flex;
+        align-items: center;
+        height: 80%;
+        font-size: 36px;
+        padding: 0 40px;
+        margin: 0 30px;
+    }
+
+    .navbar-brand {
+        height: 75%;
+        padding: 0 70px;
+    }
+
+    .navbar-brand img {
+        max-width:100%;
+        max-height:100%;
+        object-fit: contain;
+    }
+
+    .navbar {
+        display: none;
+        height: 95vh;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .open {
+        display: flex;
+        background-color: white;
+        background-image: none;
+        z-index: 100;
+    }
+
+    .navbar-lang {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        flex-grow: 0;
+    }
+
+    .navbar-lang > li {
+        width: 60%;
+    }
+
+    .navbar-lang li:hover ul {
+        display: flex;
+    }
+
+    .lang-dropdown {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    #lang {
+        display: none;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 0.7;
+    }
+
+    .section-video {
+        padding-top: 74px;
+    }
+
+    .section-sponsors ul {
+        padding-top: 50px;
+    }
+
+    .section-sponsors img {
+        max-height: 71px;
+        max-width: 144px;
+    }
+
+    .section-sponsors h3 {
+        font-size: 24px;
+    }
+
+    .form textarea {
+        height: 150px;
+    }
+
+    .form p {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .futbar-links {
+        display: none;
+    }
+
+    .futbar-rekv {
+        display: none;
+    }
+
+    .futbar-contact {
+        justify-content: space-around;
+    }
+
+    .futbar-contact a {
+        display: block;
+    }
+
+    .futbar-contact h3 {
+        display: none;
+    }
+
+    .futbar-icons {
+        flex-grow: 0;
+    }
+
+    .futbar-icons img {
+        max-height: 25px;
+    }
+
+    .futbar-brand img {
+        width: 162px;
+    }
+
+    .futbar-brand h3 {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .content h2 {
+        font-size: 24px;
+    }
+
+    .section-summary {
+        height: 280px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .section-btns {
+        margin: 75px 0;
+        padding: 0 5px;
+    }
+
+    .header {
+        height: 65px;
+        font-size: 18px;
+    }
+    .menubtn {
+        display: flex;
+        align-items: center;
+        height: 75%;
+        font-size: 32px;
+        padding: 0 10px;
+        margin: 0 10px;
+    }
+
+    .navbar-brand {
+        padding: 0 10px;
+        margin: 0 10px;
+    }
+
+    .section-video {
+        padding-top: 50px;
+    }
+
+    .section-video .playbtn {
+        width: 24%;
+    }
+
+    .section-gallery {
+        background-size: auto;
+    }
+
+    .gallery {
+        display: grid;
+        width: auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-auto-flow: column dense;
+    }
+    
+    .gallery .image {
+        z-index: -1;
+    }
+    
+    .item-a {
+        grid-row: 3/5;
+    }
+    
+    .item-b {
+        grid-row: 3/5;
+    }
+    
+    .item-e {
+        grid-row: 1/3;
+    }
+
+    .section-contact h2 {
+        margin-bottom: 30px;
+    }
+
+    .section-contact p {
+        font-size: 12px;
+    }
+
+    .section-contact .checkbox-container {
+        font-size: 12px;
+    }
+
+    .section-sponsors ul {
+        width: 100%;
+        padding-top: 50px;
+    }
+
+    .section-sponsors li {
+        width: 50%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .section-sponsors img {
+        max-height: 67px;
+        max-width: 130px;
+    }
+
+    .form input[type=text], input[type=number], textarea {
+        margin: 10px 0;
+        font-size: 14px;
+    }
+
+    .form .col-half {
+        width: 100%;
+    }
+
+    .form p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .futbar {
+        font-size: 12px;
+        flex-direction: column;
+    }
+
+    .futbar-contact {
+        text-align: left;
+        font-size: 12px;
+    }
+
+    .futbar-contact a {
+        font-size: 14px;
+    }
+
+    .futbar-icons {
+        justify-content: flex-start;
+    }
+
+    .futbar-icons img {
+        margin-left: 0;
+        margin-right: 30px;
+        margin-top: 32px;
+    }
+
+    .extra {
+        flex-direction: column;
+        font-size: 11px;
+    }
+
+    .futbar-brand img {
+        width: 100px;
+    }
+
+    .futbar-brand h3 {
+        font-size: 18px;
+    }
+    
+}
